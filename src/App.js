@@ -10,7 +10,7 @@ import MarkdownPreviewer from './components/MarkdownPreviewer.js';
 
 function App() {
   return (
-    <div className="components">
+    <div className="container-fluid">
 
             <MarkdownPreviewer />
     

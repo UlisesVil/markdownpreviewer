@@ -44,7 +44,7 @@ class MarkdownPreviewer extends React.Component{
 
     handlePreviewMaximize () {
         this.setState({
-            previewMaximized: this.state.previewMaximized
+            previewMaximized: !this.state.previewMaximized
         });
     }
 
@@ -52,19 +52,26 @@ class MarkdownPreviewer extends React.Component{
 
     render(){
 
+
+        
         const classes = 
             this.state.editorMaximized ? 
                 ['editorWrap maximized',
                 'previewWrap hide',
-                'fa fa-compress'] :
+                'fas fa-compress'] :
             this.state.previewMaximized ?
                 ['editorWrap hide',
                 'previewWrap maximized',
-                'fa fa-compress'] :
+                'fas fa-compress'] :
                 ['editorWrap',
                 'previewWrap',
-                'fa fa-arrows-alt'];
-
+                'fas fa-expand'];
+//<i class="far fa-file-code"></i>
+//fa-free-code-camp
+//<i class="fas fa-expand"></i>
+//fa-arrows-alt
+//<i class="fas fa-compress"></i>
+//fa fa-compress
         return(
 
             <div>
@@ -85,10 +92,12 @@ class MarkdownPreviewer extends React.Component{
                 </div>
 
                 <div className={classes[1]}>
-                    <Toolbar 
-                     icon={classes[2]}
-                     onClick={this.handlePreviewMaximize}
-                     text="Previewer" />
+                    
+                    <Toolbar
+                    text="Preview"
+                    icon={classes[2]} 
+                    onClick={this.handlePreviewMaximize}
+                    />
 
                     <Preview  
                         markdown={this.state.markdown} />
@@ -102,8 +111,9 @@ class MarkdownPreviewer extends React.Component{
 const Toolbar= (props)=>{
     return(
         <div className="toolbar">
-            <i title="no-stack-dub-sack"
-               className="fa fa-free-code-camp" />
+            <i title=""
+               className="far fa-file-code" />
+            {props.text}
             <i onClick={props.onClick}
                className={props.icon}> 
             </i>
