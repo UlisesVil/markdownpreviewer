@@ -1,8 +1,8 @@
 @import
 url('https://fonts.googleapis.com/css?family=Russo+One');
-$darkAccent: #224B4B;
-$lightAccent: #2CDA9D;
-$backgroundBase: #619E9E;
+$darkAccent: #db0000;
+$lightAccent: #000000;
+$backgroundBase: #000000;
 
 $shadow: 1px 1px 10px 2px
 darken($backgroundBase, 20%);
@@ -14,22 +14,51 @@ body{
     margin: 10px 0;
 }
 
+::-webkit-scrollbar-corner{
+    border-radius: 2px;
+    background: red;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    //border-radius: 10px;
+    //background: red;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 20px;
+    background: rgb(44, 43, 43);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(153, 2, 2);
+    border-radius: 20px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: red;
+    border-radius: 20px;
+    width: 10px;
+}
+
 #preview, .title{
     display: inline-block;
 }
 
 .colorScheme{
-    background-color: lighten($backgroundBase, 30%);
+    background-color: lighten($backgroundBase, 10%);
     border: $default-border;
+    border-radius: 10px;
     box-shadow: $shadow;
     border-top: none;
+    color:rgba(255, 255, 255, 0.877);
 }
 
 .toolbar{
     position: relative;
-    background-color: lighten($darkAccent, 25%);
+    background-color: lighten($darkAccent, 5%);
     padding: 4px 4px 3px 3px;
     border: $default-border;
+    border-radius: 10px;
     box-shadow: $shadow;
     font-family: Russo One;
     font-size: 15px;
@@ -43,7 +72,7 @@ body{
         position: absolute;
         right: -5px;
         font-size: 22px;
-margin-right: 5px;
+        margin-right: 5px;
     }
 }
 
@@ -52,7 +81,7 @@ margin-right: 5px;
 .fa-compress,
 .fa-expand{
     &:hover{
-        color: lighten($lightAccent, 10%);
+        color: lighten($darkAccent, 30%);
         cursor:pointer;
         font-size: 22px;
         margin-right: 5px;
@@ -164,18 +193,18 @@ margin-right: 5px;
 
 #preview{
     blockquote{
-        border-left: 3px solid #224B4B;
-        color: #224b4b;
+        border-left: 3px solid #a3c705;
+        color: #fc7a00;
         padding-left: 5px;
         margin-left: 25px;
     }
     code{
-        background: white;
+        background: rgb(134, 131, 131);
         padding: 1px 4px 2px 4px;
         font-size: 12px;
     }
     pre{
-        background: white;
+        background: rgb(134, 131, 131);
         padding: 5px 0 5px 5px;
         margin-right: 10px;
     }
