@@ -1,12 +1,6 @@
 import React from "react";
 import marked from 'marked'; /*https://forum.freecodecamp.org/t/marked-is-not-defined/300614/4 */
 
-//import ReactDOM from 'react-dom';
-
-//import Draggable from 'react-draggable'; 
-//import {DraggableCore} from 'react-draggable'; 
-import Draggable, {DraggableCore} from 'react-draggable';
-
 marked.setOptions({
     breaks:true,
 });
@@ -147,11 +141,6 @@ const Preview = (props) => {
             />
     )
 }
-
-
-
-
-
 
 
 const placeholder=
