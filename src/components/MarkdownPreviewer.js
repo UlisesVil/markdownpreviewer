@@ -144,49 +144,51 @@ const Preview = (props) => {
 
 
 const placeholder=
-`# Welcome to my React Markdown Previewer!
+`# This is my React Markdown Previewer!
 
 ## This is a sub-heading...
-### And here's some other cool stuff:
+### And below this line you'll see what this project can do:
   
 Heres some code, <strong>\`<div></div>\`</strong>, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
 
-function anotherExample(firstLine, lastLine) {
+function multiLineCode(firstLine, lastLine) {
   if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
     return multiLineCode;
   }
 }
 \`\`\`
   
-You can also make text **bold**... whoa!
+You can also make text **bold**...
 Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+Or **_both!_**  if you want 
+maybe you prefer ~~crossing some words out~~.
 
-There's also [links](https://www.freecodecamp.com), and
+As you can see we have [links](https://www.freecodecamp.com) too and
 > Block Quotes!
 
-And if you want to get really crazy, even tables:
+This is the section where I show you a table:
 
-Wild Header | Crazy Header | Another Header?
------------- | ------------- | ------------- 
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
+Header-1 | Header-2 | Header-3 | Header-4
+------------ | ------------- | ------------- | ------------- 
+content 1 | content 2 | content 3
+content 4 | content 5 | content 6
 
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
+- Have you been missing lists?.
+  - This one is bulleted.
+     - We can use indentation levels.
+        - And this is the result.
 
 
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
+1. Do you prefer numbererd lists?
+1. It works if you use 1s 
+1. We can continue and continue
+- You can use dashes
+* And asterisks
+
+Look at this, it's an image!!!
 
 ![Gif Image w/ Text](https://i.gifer.com/76X1.gif)
 `
