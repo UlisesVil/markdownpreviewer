@@ -46,7 +46,9 @@ body {
 
 .toolbar {
   position: relative;
-  background-color: #f50000;
+  background: #d20000;
+  background: -webkit-gradient(linear, left top, right top, from(#d20000), color-stop(50%, #d20000), to(#fcb045));
+  background: linear-gradient(90deg, #d20000 0%, #d20000 50%, #fcb045 100%);
   padding: 4px 4px 3px 3px;
   border: 1px solid black;
   border-radius: 10px;
@@ -224,6 +226,15 @@ body {
   }
   .editorWrap textarea {
     height: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .previewWrap {
+    margin-top: 290px;
+    margin-right: auto;
+    margin-left: 0px;
+    width: 420px;
   }
 }
 

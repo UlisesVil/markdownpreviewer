@@ -55,7 +55,8 @@ body{
 
 .toolbar{
     position: relative;
-    background-color: lighten($darkAccent, 5%);
+    background: rgb(210,0,0);
+    background: linear-gradient(90deg, rgba(210,0,0,1) 0%, rgba(210,0,0,1) 50%, rgba(252,176,69,1) 100%);
     padding: 4px 4px 3px 3px;
     border: $default-border;
     border-radius: 10px;
@@ -229,6 +230,7 @@ margin-left: auto;
         margin-top: 290px;
         margin-right: auto;
         margin-left: -10px;
+        
     }
 
     .editorWrap{
@@ -243,6 +245,19 @@ margin-left: auto;
     }   
 }
 
+
+
+@media screen and (max-width: 500px) {
+  
+    .previewWrap{
+        margin-top: 290px;
+        margin-right: auto;
+        margin-left: 0px;
+        width: 420px;
+        
+    }
+   
+}
 
 
 .maximized1{
