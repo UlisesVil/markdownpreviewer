@@ -1,6 +1,12 @@
 import React from "react";
 import marked from 'marked'; /*https://forum.freecodecamp.org/t/marked-is-not-defined/300614/4 */
 
+//import ReactDOM from 'react-dom';
+
+//import Draggable from 'react-draggable'; 
+//import {DraggableCore} from 'react-draggable'; 
+import Draggable, {DraggableCore} from 'react-draggable';
+
 marked.setOptions({
     breaks:true,
 });
@@ -62,7 +68,7 @@ class MarkdownPreviewer extends React.Component{
                 'fas fa-compress'] :
             this.state.previewMaximized ?
                 ['editorWrap hide',
-                'previewWrap maximized',
+                'previewWrap maximized1',
                 'fas fa-compress'] :
                 ['editorWrap',
                 'previewWrap',
@@ -75,7 +81,7 @@ class MarkdownPreviewer extends React.Component{
 //fa fa-compress
         return(
 
-            <div>
+            <div id="container">
 
                 <div className={classes[0]}>
                     <Toolbar 
@@ -154,7 +160,7 @@ const placeholder=
 ## This is a sub-heading...
 ### And here's some other cool stuff:
   
-Heres some code, \`<div></div>\`, between 2 backticks.
+Heres some code, <strong>\`<div></div>\`</strong>, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
@@ -193,7 +199,7 @@ And here. | Okay. | I think we get it.
 - Even if you use dashes or asterisks.
 * And last but not least, let's not forget embedded images:
 
-![React Logo w/ Text](https://i.gifer.com/76X1.gif)
+![Gif Image w/ Text](https://i.gifer.com/76X1.gif)
 `
 
 

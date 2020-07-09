@@ -94,22 +94,34 @@ body{
     font-size: 22px;
 }
 
+
+
+#container{
+    display: flex;
+    margin: 10px auto;
+    //background-color: rgb(71, 45, 45);
+}
+
+
 .editorWrap{
-    width: 600px;
-    margin:  18px auto;
+    position: fixed;
+    z-index: 1;
+    width: 400px;
+    margin:  30px;
     .toolbar{
         width: 99%;
     }
     textarea{
         @extend .colorScheme;
         width:99%;
+        height: 500px;
         min-height: 200px;
         margin-bottom: -5px;
         resize: vertical;
         outline: none;
         padding-left: 5px;
         padding-top: 5px;
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
@@ -123,7 +135,7 @@ body{
 .previewWrap {
     @extend .colorScheme;
     width: 800px;
-    margin: 20px auto;
+    margin: 30px auto;
     min-height: 200px;
     overflow-wrap: break-word;
     //padding-right: 20px;
@@ -145,49 +157,30 @@ body{
 @media screen and (max-with: 850px){
     .previewWrap{
         width: 630px;
+        display: block;
     }
     .editorWrap{
         width: 550px;
+        display: block;
     }
 }
 
 .maximized{
     width: 96%;
     min-height: 100vh;
-    margin: auto;
+    margin: 10px auto;
     textarea{
-        min-height: 95vh;
+        min-height: 90vh;
         resize: none;
     }
 }
+
 
 
 .hide {
     display: none;
 }
 
-@media screen and (max-width: 650px) {
-    body {
-        margin: 5px 0;
-    }
-    .editorWrap {
-        width: 80vh;
-        margin: 0 auto;
-    }
-    .maximized {
-        width: 95%;
-        margin: auto;
-    }
-    .previewWrap {
-        width: 95vw;
-        #preview {
-            width: 100%;
-            img {
-                height: 200px;
-            }
-        }
-    }
-}
 
 //markdown styles
 
@@ -201,7 +194,7 @@ body{
     code{
         background: rgb(134, 131, 131);
         padding: 1px 4px 2px 4px;
-        font-size: 12px;
+        font-size: 15px;
     }
     pre{
         background: rgb(134, 131, 131);
@@ -226,4 +219,45 @@ body{
     }
 }
 
-  
+@media screen and (max-width: 1400px) {
+    #container{
+
+margin-right: auto;
+margin-left: auto;
+    }
+    .previewWrap{
+        margin-top: 290px;
+        margin-right: auto;
+        margin-left: -10px;
+    }
+
+    .editorWrap{
+        margin: 10px auto;
+        
+        border-bottom: 2px solid white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        textarea{
+            height: 200px;
+        }
+    }   
+}
+
+
+
+.maximized1{
+    width: 96%;
+    min-height: 100vh;
+    margin: 10px auto;
+    margin-left: -120px;
+    //margin-right: -20px;
+    padding-top: 0px;
+    textarea{
+        min-height: 95vh;
+        resize: none;
+    }
+    img{
+        width: 350px;
+        margin-left: 10px;
+    }
+}
