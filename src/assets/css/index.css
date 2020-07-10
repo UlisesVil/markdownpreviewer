@@ -241,6 +241,9 @@ body {
     margin: auto;
     margin-left: 5px;
   }
+  ::-webkit-scrollbar {
+    width: 17px;
+  }
 }
 
 .maximized1 {

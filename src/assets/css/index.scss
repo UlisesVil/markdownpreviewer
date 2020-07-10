@@ -17,6 +17,7 @@ body{
     border-radius: 2px;
     background: red;
 }
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -258,6 +259,10 @@ body{
         margin-left:5px;
     }
    
+    ::-webkit-scrollbar{
+        width: 17px;
+    }
+
 }
 
 .maximized1{
