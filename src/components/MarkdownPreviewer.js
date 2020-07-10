@@ -11,8 +11,6 @@ renderer.link = function(href, title, text){
     href="${href}">${text}` + "</a>"; 
 }
 
-
-
 class MarkdownPreviewer extends React.Component{
 
     constructor (props){
@@ -50,10 +48,7 @@ class MarkdownPreviewer extends React.Component{
     }
 
 
-
     render(){
-
-
         
         const classes = 
             this.state.editorMaximized ? 
@@ -67,12 +62,7 @@ class MarkdownPreviewer extends React.Component{
                 ['editorWrap',
                 'previewWrap',
                 'fas fa-expand'];
-//<i class="far fa-file-code"></i>
-//fa-free-code-camp
-//<i class="fas fa-expand"></i>
-//fa-arrows-alt
-//<i class="fas fa-compress"></i>
-//fa fa-compress
+
         return(
 
             <div id="container">
@@ -86,25 +76,21 @@ class MarkdownPreviewer extends React.Component{
                     <Editor  
                         markdown={this.state.markdown}
                         onChange={this.handleChange} />
-
                 </div>
 
                 <div className="converter">
                 </div>
 
                 <div className={classes[1]}>
-                    
                     <Toolbar
-                    text="Preview"
-                    icon={classes[2]} 
-                    onClick={this.handlePreviewMaximize}
-                    />
+                        text="Preview"
+                        icon={classes[2]} 
+                        onClick={this.handlePreviewMaximize} />
 
                     <Preview  
                         markdown={this.state.markdown} />
                 </div>
             </div>
-
         )
     }
 };
@@ -125,9 +111,9 @@ const Toolbar= (props)=>{
 const Editor = (props) => {
     return (
         <textarea id="editor"
-         value={props.markdown}
-         onChange={props.onChange}
-         type="text" />
+            value={props.markdown}
+            onChange={props.onChange}
+            type="text" />
     )
 }
 

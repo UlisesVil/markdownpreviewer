@@ -233,8 +233,13 @@ body {
   .previewWrap {
     margin-top: 290px;
     margin-right: auto;
-    margin-left: 0px;
+    margin-left: -100px;
     width: 420px;
+  }
+  img {
+    width: 350px;
+    margin: auto;
+    margin-left: 5px;
   }
 }
 

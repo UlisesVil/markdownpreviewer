@@ -1,16 +1,15 @@
 @import
 url('https://fonts.googleapis.com/css?family=Russo+One');
-$darkAccent: #db0000;
-$lightAccent: #000000;
-$backgroundBase: #000000;
+$redStyle: #db0000;
+$blackStyle: #000000;
 
 $shadow: 1px 1px 10px 2px
-darken($backgroundBase, 20%);
+darken($blackStyle, 20%);
 $default-border:1px solid
-darken($backgroundBase,35%);
+darken($blackStyle,35%);
 
 body{
-    background: lighten($backgroundBase, 0%);
+    background: lighten($blackStyle, 0%);
     margin: 10px 0;
 }
 
@@ -20,8 +19,6 @@ body{
 }
 ::-webkit-scrollbar{
     width: 10px;
-    //border-radius: 10px;
-    //background: red;
 }
 
 ::-webkit-scrollbar-track{
@@ -34,6 +31,7 @@ body{
     border-radius: 20px;
     width: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover{
     background: red;
     border-radius: 20px;
@@ -45,7 +43,7 @@ body{
 }
 
 .colorScheme{
-    background-color: lighten($backgroundBase, 10%);
+    background-color: lighten($blackStyle, 10%);
     border: $default-border;
     border-radius: 10px;
     box-shadow: $shadow;
@@ -82,36 +80,33 @@ body{
 .fa-compress,
 .fa-expand{
     &:hover{
-        color: lighten($darkAccent, 30%);
+        color: lighten($redStyle, 30%);
         cursor:pointer;
         font-size: 22px;
         margin-right: 5px;
-
     }
 }
 
 .fa-file-code{
-    margin-right:  3px;
+    margin-right: 3px;
     font-size: 22px;
 }
-
-
 
 #container{
     display: flex;
     margin: 10px auto;
-    //background-color: rgb(71, 45, 45);
 }
-
 
 .editorWrap{
     position: fixed;
     z-index: 1;
     width: 400px;
     margin:  30px;
+
     .toolbar{
         width: 99%;
     }
+
     textarea{
         @extend .colorScheme;
         width:99%;
@@ -139,14 +134,14 @@ body{
     margin: 30px auto;
     min-height: 200px;
     overflow-wrap: break-word;
-    //padding-right: 20px;
+
     .toolbar {
-      //left: -1px;
       width: 100%;
       padding-right: 17px;
       border-right: 0px;
       border-left: 0px;
     }
+
     #preview {
       margin-left: 5px;
       margin-top: -10px;
@@ -154,12 +149,12 @@ body{
     }
 }
 
-
 @media screen and (max-with: 850px){
     .previewWrap{
         width: 630px;
         display: block;
     }
+
     .editorWrap{
         width: 550px;
         display: block;
@@ -170,20 +165,16 @@ body{
     width: 96%;
     min-height: 100vh;
     margin: 10px auto;
+
     textarea{
         min-height: 90vh;
         resize: none;
     }
 }
 
-
-
 .hide {
     display: none;
 }
-
-
-//markdown styles
 
 #preview{
     blockquote{
@@ -192,29 +183,35 @@ body{
         padding-left: 5px;
         margin-left: 25px;
     }
+
     code{
         background: rgb(134, 131, 131);
         padding: 1px 4px 2px 4px;
         font-size: 15px;
     }
+
     pre{
         background: rgb(134, 131, 131);
         padding: 5px 0 5px 5px;
         margin-right: 10px;
     }
+
     h1{
-        border-bottom: 2px solid $darkAccent;
+        border-bottom: 2px solid $redStyle;
         width: 99%;
     }
+
     h2{
-        border-bottom: 1px solid $darkAccent;
+        border-bottom: 1px solid $redStyle;
         width: 99%;
     }
+
     table{
         border-collapse: collapse;
     }
+
     td,th{
-        border: 2px solid $darkAccent;
+        border: 2px solid $redStyle;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -222,10 +219,10 @@ body{
 
 @media screen and (max-width: 1400px) {
     #container{
-
-margin-right: auto;
-margin-left: auto;
+        margin-right: auto;
+        margin-left: auto;
     }
+
     .previewWrap{
         margin-top: 290px;
         margin-right: auto;
@@ -235,42 +232,46 @@ margin-left: auto;
 
     .editorWrap{
         margin: 10px auto;
-        
         border-bottom: 2px solid white;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+            
         textarea{
             height: 200px;
         }
     }   
 }
 
-
-
 @media screen and (max-width: 500px) {
   
     .previewWrap{
         margin-top: 290px;
         margin-right: auto;
-        margin-left: 0px;
+        margin-left: -100px;
         width: 420px;
         
     }
+
+    img{
+        width: 350px;
+        margin: auto;
+        margin-left:5px;
+    }
    
 }
-
 
 .maximized1{
     width: 96%;
     min-height: 100vh;
     margin: 10px auto;
     margin-left: -120px;
-    //margin-right: -20px;
     padding-top: 0px;
+
     textarea{
         min-height: 95vh;
         resize: none;
     }
+
     img{
         width: 350px;
         margin-left: 10px;

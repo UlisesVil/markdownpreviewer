@@ -6,8 +6,6 @@ import './assets/css/App.css';
 //importar componentes
 import MarkdownPreviewer from './components/MarkdownPreviewer.js';
 
-
-
 function App() {
   return (
     <div className="container-fluid">
@@ -15,7 +13,6 @@ function App() {
             <MarkdownPreviewer />
     
     </div>
-    
   );
 }
 
