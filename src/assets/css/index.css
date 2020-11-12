@@ -6,7 +6,7 @@ body {
 
 ::-webkit-scrollbar-corner {
   border-radius: 2px;
-  background: red;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -22,6 +22,7 @@ body {
   background: #990202;
   border-radius: 20px;
   width: 10px;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -56,6 +57,7 @@ body {
           box-shadow: 1px 1px 10px 2px black;
   font-family: Russo One;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .toolbar i {
@@ -143,17 +145,6 @@ body {
   width: 100%;
 }
 
-@media screen and (max-with: 850px) {
-  .previewWrap {
-    width: 630px;
-    display: block;
-  }
-  .editorWrap {
-    width: 550px;
-    display: block;
-  }
-}
-
 .maximized {
   width: 96%;
   min-height: 100vh;
@@ -163,6 +154,24 @@ body {
 .maximized textarea {
   min-height: 90vh;
   resize: none;
+}
+
+.maximized1 {
+  width: 96%;
+  min-height: 100vh;
+  margin: 10px auto;
+  margin-left: -120px;
+  padding-top: 0px;
+}
+
+.maximized1 textarea {
+  min-height: 95vh;
+  resize: none;
+}
+
+.maximized1 img {
+  width: 350px;
+  margin-left: 10px;
 }
 
 .hide {
@@ -229,6 +238,17 @@ body {
   }
 }
 
+@media screen and (max-with: 850px) {
+  .previewWrap {
+    width: 630px;
+    display: block;
+  }
+  .editorWrap {
+    width: 550px;
+    display: block;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .previewWrap {
     margin-top: 290px;
@@ -244,23 +264,5 @@ body {
   ::-webkit-scrollbar {
     width: 17px;
   }
-}
-
-.maximized1 {
-  width: 96%;
-  min-height: 100vh;
-  margin: 10px auto;
-  margin-left: -120px;
-  padding-top: 0px;
-}
-
-.maximized1 textarea {
-  min-height: 95vh;
-  resize: none;
-}
-
-.maximized1 img {
-  width: 350px;
-  margin-left: 10px;
 }
 /*# sourceMappingURL=index.css.map */

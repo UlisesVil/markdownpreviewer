@@ -27,8 +27,6 @@ class MarkdownPreviewer extends React.Component{
         this.handlePreviewMaximize = this.handlePreviewMaximize.bind(this);
     }
 
-
-
     handleChange (e) {
         this.setState({
             markdown: e.target.value
@@ -46,7 +44,6 @@ class MarkdownPreviewer extends React.Component{
             previewMaximized: !this.state.previewMaximized
         });
     }
-
 
     render(){
         
@@ -66,16 +63,17 @@ class MarkdownPreviewer extends React.Component{
         return(
 
             <div id="container">
-
                 <div className={classes[0]}>
                     <Toolbar 
                         icon={classes[2]}
                         onClick={this.handleEditorMaximize}
-                        text="Editor" />
+                        text="Editor" 
+                    />
                     
                     <Editor  
                         markdown={this.state.markdown}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange} 
+                    />
                 </div>
 
                 <div className="converter">
@@ -85,10 +83,12 @@ class MarkdownPreviewer extends React.Component{
                     <Toolbar
                         text="Preview"
                         icon={classes[2]} 
-                        onClick={this.handlePreviewMaximize} />
+                        onClick={this.handlePreviewMaximize} 
+                    />
 
                     <Preview  
-                        markdown={this.state.markdown} />
+                        markdown={this.state.markdown} 
+                    />
                 </div>
             </div>
         )
@@ -113,10 +113,10 @@ const Editor = (props) => {
         <textarea id="editor"
             value={props.markdown}
             onChange={props.onChange}
-            type="text" />
+            type="text" 
+        />
     )
 }
-
 
 const Preview = (props) => {
     return(
@@ -124,10 +124,9 @@ const Preview = (props) => {
             dangerouslySetInnerHTML={{__html: 
             marked(props.markdown, { renderer: renderer 
                 })}} 
-            />
+        />
     )
 }
-
 
 const placeholder=
 `# This is my React Markdown Previewer!
