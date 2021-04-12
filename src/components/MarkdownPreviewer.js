@@ -1,5 +1,5 @@
 import React from "react";
-import marked from 'marked'; /*https://forum.freecodecamp.org/t/marked-is-not-defined/300614/4 */
+import marked from 'marked';
 
 marked.setOptions({
     breaks:true,
@@ -15,13 +15,11 @@ class MarkdownPreviewer extends React.Component{
 
     constructor (props){
         super(props);
-
         this.state ={
             markdown: placeholder,
             editorMaximized: false,
             previewMaximized: false
         }
-
         this.handleChange = this.handleChange.bind(this);
         this.handleEditorMaximize = this.handleEditorMaximize.bind(this);
         this.handlePreviewMaximize = this.handlePreviewMaximize.bind(this);
@@ -46,7 +44,6 @@ class MarkdownPreviewer extends React.Component{
     }
 
     render(){
-        
         const classes = 
             this.state.editorMaximized ? 
                 ['editorWrap maximized',
@@ -59,9 +56,7 @@ class MarkdownPreviewer extends React.Component{
                 ['editorWrap',
                 'previewWrap',
                 'fas fa-expand'];
-
         return(
-
             <div id="container">
                 <div className={classes[0]}>
                     <Toolbar 
@@ -69,23 +64,17 @@ class MarkdownPreviewer extends React.Component{
                         onClick={this.handleEditorMaximize}
                         text="Editor" 
                     />
-                    
                     <Editor  
                         markdown={this.state.markdown}
                         onChange={this.handleChange} 
                     />
                 </div>
-
-                <div className="converter">
-                </div>
-
                 <div className={classes[1]}>
                     <Toolbar
                         text="Preview"
                         icon={classes[2]} 
                         onClick={this.handlePreviewMaximize} 
                     />
-
                     <Preview  
                         markdown={this.state.markdown} 
                     />
@@ -123,7 +112,7 @@ const Preview = (props) => {
         <div id="preview"
             dangerouslySetInnerHTML={{__html: 
             marked(props.markdown, { renderer: renderer 
-                })}} 
+            })}} 
         />
     )
 }
@@ -176,7 +165,6 @@ content 4 | content 5 | content 6
 Look at this, it's an image!!!
 
 ![Gif Image w/ Text](https://i.gifer.com/76X1.gif)
-`
-
+`;
 
 export default MarkdownPreviewer;
